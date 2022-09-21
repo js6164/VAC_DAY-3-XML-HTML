@@ -1,0 +1,89 @@
+h1 {
+                text-align: center;
+                font-family: impact,serif;
+                font-size: 40px;
+                 margin-top: 0;
+                 margin-bottom: 15px;
+            }
+
+.established-date {
+    font-style: italic;
+}
+
+hr {
+    height: 2px;
+    background-color: black;
+    border-color: green;
+}
+
+            h2 {
+                text-align: center;
+                 font-family: impact, serif;
+                 font-size: 30px;
+                 margin-bottom: ;
+            }
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -25px;
+    
+}
+
+            p {
+                text-align: center;
+            }
+
+            body {
+               background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwxIMn2mxOJUR8dyICigleaANq9dMapWKpuw&usqp=CAU");
+               font-family: sans-serif;
+               padding: 200px;
+            } 
+
+            .menu {
+                background-color: burlywood;
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 20px;
+                max-width: 500px;
+            }
+
+            .coffee-flavor {
+                text-align: left;
+                width: 75%;
+            }
+            .coffee-price {
+                text-align: right;
+                width: 25%;
+            }
+
+            .flavor-price p {
+                display: inline-block;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                font-size: 20px;
+            }
+
+            .bottom-line {
+                margin-top: 25px;
+            }
+
+            footer {
+                font-size: 14px;
+            }
+
+           a:visited {
+               color: black;
+           }
+
+        a:hover {
+               color: brown;
+           }
+           a:active {
+               color: brown;
+           }
+           .address {
+               margin-bottom: 5px;
+           }

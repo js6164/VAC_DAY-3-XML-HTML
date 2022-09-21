@@ -1,0 +1,54 @@
+XML {display:none}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #FFFFFF;
+  background-image: url("https://r1imghtlak.mmtcdn.com/8adf272a96b011e7b0950a209fbd0127.jfif?&output-quality=75&output-format=jpg");
+	margin: 5px;
+	text-align: left;
+	color: #523819;
+}
+
+h2{
+	font-size: 140%;
+	color: #0D3427;
+	margin-top: 10px;
+}
+
+p{
+	font-size: 100%;
+	color: #523819;
+  font-family:bold;
+}
+
+table{
+	background-color: #DACFE5;
+	border-color: #000000;
+	border-width: thin;
+	border-collapse: collapse;
+	width: 70%;
+}
+
+th{
+	border-color: #000000;
+	font-size: 100%;
+	color: #100aad;
+}
+
+td{
+	border-color: #000000;
+	font-size:100%;
+	color: #523819;
+	padding: 5px;
+}
+
+img{
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 20px;
+}
+
+.indent{
+	margin-left: 80px;
+}

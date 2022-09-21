@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - RA2112704010021</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Querido's Cafe Menu</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+<link href="styles.css" rel="stylesheet" type="text/css"/>
+
+<!-- Include the JavaScript code for processing the XML data -->
+<script src="Querido's cafe.js">
+</script>
+<script>
+	window.addEventListener("load", function() {
+		initialize('menuTable','cafeMenuXML');
+		document.forms[0].txtBillAmt.value=calculateBill('menuTable');
+		document.querySelector("#calcBill").addEventListener("click", function () {
+			document.forms[0].txtBillAmt.value=calculateBill('menuTable');
+		});
+		document.querySelector("#showVeg").addEventListener("click", function () {
+			highlightVegetarian('menuTable',this.checked);			
+		});
+	});
+</script>
+</head>
+<body>
+
+<!--
+This is the embedded XML Data Island. The reason it does not render in
+the page is because we included a CSS style tag that sets the display of
+the XML tag to "none". Ordinarily, this is not how you would access XML
+in typical real-world production. For example, the XML data would be 
+retrieved from some other location using AJAX. To keep this example
+simple and self-contained, the XML is embedded in the document.
+-->
+<xml id="cafeMenuXML">
+  <cafemenu>
+  	<section name="Starters">
+  		<entree vegetarian="true">
+  			<item>Potato Salad</item>
+  			<price>50</price>
+  		</entree>
+  		<entree vegetarian="true">
+        
+  			<item>Chilli Potato</item>
+  			<price>70</price>
+  		</entree>
+  		<entree>
+  			<item>Huevos Rancheros</item>
+  			<price>90</price>
+  		</entree>
+      
+        <entree vegetarian="true">
+  			<item>Garlic Breadstick</item>
+  			<price>60</price>
+  		</entree>
+  	</section>
+  	<section name="Sandwiches">
+  		<entree vegetarian="true">
+  			<item>Veg Grilled Sandwich</item>
+  			<price>80</price>
+  		</entree>
+  		<entree vegetarian="true">
+			<item>Peppy Paneer Sandwich</item>
+			<price>60</price>
+  		</entree>
+  		<entree>
+  			<item>Chicken Grilled Sandwich</item>
+  			<price>60</price>
+  		</entree>
+  		<entree vegetarian="true">
+  			<item>French toast</item>
+			<price>75</price>
+  		</entree>
+  		<entree>
+  		    <item>Croissant</item>
+  		    <price>100</price>
+  		</entree>
+  	</section>
+  	<section name="Burgers">
+  		<entree>
+  			<item>Grilled Chicken Burger</item>
+  			<price>80</price>
+  		</entree>
+      <entree>
+  			<item>Double Stuffed Grilled Chicken Cheese Burger</item>
+			<price>55</price>
+  		</entree>
+  		<entree vegetarian="true">
+  			<item>Burger Classic</item>
+			<price>60</price>
+  		</entree>
+      <entree vegetarian="true">
+  			<item>Linguini with Grilled Porcini Mushroom</item>
+  			<price>80</price>
+        </entree>
+  	</section>
+  	<section name="Drinks">
+  		<entree vegetarian="true">
+  			<item>Iced Tea</item>
+  			<price>10</price>
+  		</entree>
+  		<entree vegetarian="true">
+  			<item>Cold Coffee</item>
+  			<price>30</price>
+  		</entree>
+      <entree vegetarian="true">
+  			<item>Coffee</item>
+  			<price>15</price>
+  		</entree>
+      <entree vegetarian="true">
+  			<item>Fresh Fruit shakes- Banana, Watermelon, Lime</item>
+  			<price>20</price>
+  		</entree>
+  		
+  		
+	</section>
+  </cafemenu>
+</xml>
+
+<h2><img src="data:image/png;base64,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" alt="Cannot load Logo" width="100" height="100"/>   Welcome to Querido's Cafe</h2>
+<p>Select your entrees from the menu below. To calculate the amount of the bill,
+  click the Calculate Bill button. Check the &quot; Highlight Meals &quot;
+  box to highlight vegetarian and non vegetarian dishes in green and red respectively.</p>
+<table id="menuTable" border="1" class="indent">
+  <thead>
+	<tr>
+	  <th colspan="3">Querido's Cafe Menu</th>
+	</tr>
+	<tr>
+	  <th> Select</th>
+	  <th> Dish</th>
+	  <th> Price (₹)</th>
+	</tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<form class="indent">
+  <p>
+	<input type="button" name="btnCalcBill" value="Calculate Bill" id="calcBill"/>
+	Total: ₹
+	<input type="text" name="txtBillAmt"/>
+	<input type="checkbox" name="cbOpts" value="isVeg" id="showVeg"/>
+	<label for="showVeg">Highlight Meals</label>
+	</p>
+</form>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

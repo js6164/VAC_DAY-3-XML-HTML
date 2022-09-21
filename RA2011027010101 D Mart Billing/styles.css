@@ -1,0 +1,53 @@
+XML {display:none}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: #A1C298;
+	margin: =4px;
+	text-align: left;
+	color: #523819;
+  background-image: url("https://www.forbesindia.com/fbimages/900x600/proportional/jpeg/blog/wp-content/uploads/2017/02/supermarket.jpg")
+}
+
+h2{
+	font-size: 200%;
+	color: #0D3427;
+	margin-top: 10px;
+}
+
+p{
+	font-size: 80%;
+	color: #523819;
+}
+
+table{
+	background-color: #FECD70;
+	border-color: #000000;
+	border-width: thin;
+	border-collapse: collapse;
+	width: 75%;
+}
+
+th{
+	border-color: #000000;
+	font-size: 120%;
+	color: #0D3427;
+}
+
+td{
+	border-color: #000000;
+	font-size: 100%;
+	color: #523819;
+	padding: 5px;
+}
+
+img{
+	float: left;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 0px;
+}
+
+.indent{
+	margin-left: 78px;
+}

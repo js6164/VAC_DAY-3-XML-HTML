@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Blue Plates</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+  <style id="table_style" type="text/css">
+<link  href="styles.css" rel="stylesheet" type="text/css"/>
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/script.js">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+<!-- Include the JavaScript code for processing the XML data -->
+<script src="JoesCafeCode.js">
+</script>
+<script>
+	window.addEventListener("load", function() {
+		initialize('menuTable','cafeMenuXML');
+		document.forms[0].txtBillAmt.value=calculateBill('menuTable');
+		document.querySelector("#calcBill").addEventListener("click", function () {
+			document.forms[0].txtBillAmt.value=calculateBill('menuTable');
+		});
+		document.querySelector("#showVeg").addEventListener("click", function () {
+			highlightVegetarian('menuTable',this.checked);			
+		});
+	});
+</script>
+</head>
+<body>
+
+<!--
+This is the embedded XML Data Island. The reason it does not render in
+the page is because we included a CSS style tag that sets the display of
+the XML tag to "none". Ordinarily, this is not how you would access XML
+in typical real-world production. For example, the XML data would be 
+retrieved from some other location using AJAX. To keep this example
+simple and self-contained, the XML is embedded in the document.
+-->
+<xml id="cafeMenuXML">
+  <cafemenu>
+  	<section name="Side Dishes">
+  		<entree vegetarian="true">
+  			<item>THE Salad</item>
+  			<price> 20</price>
+  		</entree>
+  		<entree>
+  			<item>French Fries</item>
+  			<price> 100</price>
+  		</entree>
+  		<entree>
+  			<item>Epic Rancheros</item>
+  			<price>6.50</price>
+  		</entree>
+  	</section>
+  	<section name="Breakfast">
+  		<entree>
+  			<item>Two Eggs, any style</item>
+  			<price>2.99</price>
+  		</entree>
+  		<entree>
+			<item>Chef's special Peppers and Eggs</item>
+			<price>6.29</price>
+  		</entree>
+  		<entree vegetarian="true">
+  			<item>Bowl of fruit</item>
+  			<price>4.99</price>
+  		</entree>
+  		<entree vegetarian="true">
+  			<item>French toast</item>
+			<price>3.25</price>
+  		</entree>
+  		<entree>
+  		    <item>Croissant</item>
+  		    <price>1.99</price>
+  		</entree>
+  	</section>
+  	<section name="Lunch">
+  		<entree>
+  			<item>Grilled Chicken Sandwich</item>
+  			<price>5.99</price>
+  		</entree>
+  		<entree>
+  			<item>Tuna Melt</item>
+			<price>4.99</price>
+  		</entree>
+  		<entree vegetarian="true">
+  			<item>Pasta Salad</item>
+			<price>5.39</price>
+  		</entree>
+  	</section>
+  	<section name="Dinner">
+  		<entree>
+  			<item>New York Steak</item>
+  			<price>8.99</price>
+  		</entree>
+  		<entree>
+  			<item>Chilean Sea Bass</item>
+  			<price>10.99</price>
+  		</entree>
+  		<entree vegetarian="true">
+  			<item>Linguini with Grilled Porcini Mushroom</item>
+  			<price>7.79</price>
+  		</entree>
+	</section>
+  </cafemenu>
+</xml>
+
+<u><h2><img src="https://w0.peakpx.com/wallpaper/952/732/HD-wallpaper-pizza-cartoon.jpg" alt="Javaco Tea Logo" width="58" height="100"/>Welcome to Blue Plates</h2></u>
+<p>Select your entrees from the menu below. To calculate the amount of the bill,
+  click the Calculate Bill button. Check the &quot; Highlight Vegetarian Meals &quot;
+  box for vegetarian dishes.</p>
+<table id="menuTable" border="1" class="indent">
+  <thead>
+	
+	<tr>
+	  <th>Select</th>
+	  <th>Item</th>
+	  <th>Price(&#8377)</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<form class="indent">
+  <p>
+	<input type="button" name="btnCalcBill" value="Calculate Bill" id="calcBill"
+         class="but"/>
+	Total: &#8377
+	<input type="text" name="txtBillAmt" class="veg"/>
+	<input type="checkbox" name="cbOpts" value="isVeg" id="showVeg" />
+	<label for="showVeg">Highlight Vegetarian Meals</label>
+	</p>
+ 
+</body>
+  </html>

@@ -1,0 +1,56 @@
+XML {display:none}
+
+body {
+	font-family:emoji;
+	background-color: #FFDEAD;
+	margin: 5px;
+	text-align:centre;
+	color: #523819;
+}
+
+h2{
+  font-family: fantasy;
+	font-size: 300%;
+	color: #0D3427;
+	margin-top: 30px;
+}
+
+p{
+  font-family:cursive;
+  ;
+	font-size: 180%;
+	color: #523819;
+}
+
+table{
+	background-color: #B0C4DE;
+	border-color: #000000;
+	border-width: thin;
+	border-collapse: collapse;
+	width: 85%;
+}
+
+th{
+	border-color: #000000;
+	font-size: 140%;
+	color: #0000CD;
+}
+
+td{
+	border-color: #000000;
+	font-size: 120%;
+	color: #523819;
+	padding: 5px;
+}
+
+img{
+	float: centre;
+	margin-left: 30px;
+	margin-right: 50px;
+	border: 0px;
+}
+
+.indent{
+	margin-left: 100px;
+}
+

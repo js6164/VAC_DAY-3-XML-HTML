@@ -10,8 +10,8 @@ Regn- RA2111026010518
 URL: https://codepen.io/dotslashsimran/pen/vYjJEVe
 
 
-1) RA2011027010174:
-    CODEPEN LINK : https://codepen.io/sreesh2804/pen/jOxLEZX
+RA2011027010174:
+CODEPEN LINK : https://codepen.io/sreesh2804/pen/jOxLEZX
 
 
 RA2011027010185 : CODEPEN LINK : https://codepen.io/urskarthik1/pen/JjvyoyY
@@ -21,8 +21,8 @@ RA2111028010129
 https://codepen.io/vanshpitalia/pen/bGMrNyO
 
 
-2) RA2112704010005
-   https://codepen.io/animeshr22/pen/XWqaJer
+RA2112704010005
+https://codepen.io/animeshr22/pen/XWqaJer
 
 RA2011027010117
 Codepen link: https://codepen.io/sayyed-nabeel/pen/XWqaJgv

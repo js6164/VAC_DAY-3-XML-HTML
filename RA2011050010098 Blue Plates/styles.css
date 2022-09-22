@@ -1,0 +1,70 @@
+
+XML {display:none}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: black;
+	margin: 5px;
+	text-align: left;
+	color: red;
+  
+}
+
+h2{
+	font-size: 240%;
+	color: red;
+	margin-top: 10px;
+  font-family: 'Dancing Script', cursive;
+}
+
+p{
+	font-size: 80%;
+	color: white;
+}
+
+table{
+	background-color: black;
+	border-color: #000000;
+	border: 0px;
+	border-collapse: collapse;
+	width: 75%;
+}
+
+th{
+	border: 0px;
+	font-size: 120%;
+	color: orange;
+}
+
+td{
+	border: 0px;
+	font-size: 100%;
+	color: pink;
+	padding: 5px;
+}
+
+img{
+	float: left;
+	margin-left: 1px;
+	margin-right: 1px;
+	border: 0px;
+  height: 300px;
+  width: auto;
+}
+
+.indent{
+	margin-left: 78px;
+}
+.but{
+  color: white;
+  background-color: orange;
+  border-radius: 10px;
+  border: 0px;
+  padding: 5px;
+}
+.veg{
+  background-color: black;
+  border: 1px solid;
+  color: white;
+  border-color: orange;
+}

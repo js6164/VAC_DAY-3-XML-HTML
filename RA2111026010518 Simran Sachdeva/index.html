@@ -1,0 +1,89 @@
+<head>
+    <title>Restaurant Bill</title>
+</head>
+
+<body>
+  <img src="https://img.onmanorama.com/content/dam/mm/en/travel/travel-news/images/2020/6/24/goa-shack-beach.jpg">
+  <center>
+    <h1>Wagamama's Shack</h1>
+  <h2>MENU:</h2>
+    <table> 
+    <thead>
+      
+        <tr>
+            <th>Dish</th> 
+            <th>Price Per Dish</th> 
+          <th>quantity</th>
+        </tr>
+    <tbody>
+      <center>
+        <tr>
+            <td>Chicken Dumplings</td>
+            <td>525</td>
+          <td>1</td>
+        </tr>
+        <tr>
+            <td>Eggrolls</td>
+            <td>495</td>
+          <td>1</td>
+        </tr>
+        <tr>
+            <td>Spring Rolls</td>
+            <td>495</td>
+          <td>1</td>
+        </tr>
+        <tr>
+            <td>Spaghetti and meatballs</td>
+            <td>1245</td>
+          <td>1</td>
+        </tr>
+        <tr>
+            <td>Chicken Fried Rice</td>
+            <td>1245</td>
+          <td>1</td>
+        </tr>
+        <tr>
+            <td>Sesame Chicken</td>
+            <td>1245</td>
+          <td>1</td>
+        </tr>
+        <tr>
+            <td>Chicken Tikka Masala</td>
+            <td>1100</td>
+          <td>1</td>
+        </tr>
+        <tr>
+            <td>Pizza Special</td>
+            <td>1100</td>
+          <td>1</td>
+        </tr>
+        <tr>
+            <td>Seafood Ramen</td>
+            <td>1100</td>
+          <td>1</td>
+        </tr>
+      </center>
+    </tbody>
+    </thead>
+    </table>
+
+<!-- Prepare the output table which will display the JS script of items selected from menu by user -->
+  <br><br>
+<b>ORDER:</b>
+      <table>
+        <thead>
+          <tr>
+              <th>Dish</th>
+              <th>Price</th>
+              <th>Quantity</th>
+          </tr>
+        </thead>
+    <tbody id='orderTable' oninput="updateSubtotals()"></tbody>
+    </table>
+
+<br><br>
+<b>BILL:</b>
+<br>₹<span id="perGuestSubtotal"></span>
+<center>
+
+</body>

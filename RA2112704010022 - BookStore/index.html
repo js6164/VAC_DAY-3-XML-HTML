@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - RA2112704010022</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Suryansh's Book Store</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+
+  <!-- Include the JavaScript code for processing the XML data -->
+  <script src="JoesCafeCode.js">
+  </script>
+  <script>
+    window.addEventListener("load", function() {
+      initialize('menuTable', 'cafeMenuXML');
+      document.forms[0].txtBillAmt.value = calculateBill('menuTable');
+      document.querySelector("#calcBill").addEventListener("click", function() {
+        document.forms[0].txtBillAmt.value = calculateBill('menuTable');
+      });
+      document.querySelector("#showVeg").addEventListener("click", function() {
+        highlightVegetarian('menuTable', this.checked);
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+  <!--
+This is the embedded XML Data Island. The reason it does not render in
+the page is because we included a CSS style tag that sets the display of
+the XML tag to "none". Ordinarily, this is not how you would access XML
+in typical real-world production. For example, the XML data would be 
+retrieved from some other location using AJAX. To keep this example
+simple and self-contained, the XML is embedded in the document.
+-->
+  <xml id="cafeMenuXML">
+    <cafemenu>
+      <section name="Fiction Novels">
+        <entree vegetarian="true">
+          <item>Percy Jackson</item>
+          <price>5.00</price>
+        </entree>
+        <entree>
+          <item>Game of Thrones</item>
+          <price>5.50</price>
+        </entree>
+        <entree>
+          <item>Maze Runner</item>
+          <price>6.50</price>
+        </entree>
+      </section>
+      <section name="Computer Science">
+        <entree>
+          <item>Data Structures and algorithm</item>
+          <price>2.99</price>
+        </entree>
+        <entree>
+          <item>Fundamental of Data Science</item>
+          <price>6.29</price>
+        </entree>
+        <entree>
+          <item>Object Oriented Book</item>
+          <price>4.99</price>
+        </entree>
+        <entree>
+          <item>Python 100 days</item>
+          <price>3.25</price>
+        </entree>
+      </section>
+      <section name="General">
+        <entree>
+          <item>Ayurvedic Maths</item>
+          <price>5.99</price>
+        </entree>
+        <entree>
+          <item>Social studies 2016</item>
+          <price>4.99</price>
+        </entree>
+        <entree vegetarian="true">
+          <item>Operating System</item>
+          <price>5.39</price>
+        </entree>
+      </section>
+      <section name="Bibliography">
+        <entree>
+          <item>Indian Fighters</item>
+          <price>8.99</price>
+        </entree>
+        <entree>
+          <item>World War 3?</item>
+          <price>10.99</price>
+        </entree>
+        <entree vegetarian="true">
+          <item>Mahatma Gandhi</item>
+          <price>7.79</price>
+        </entree>
+      </section>
+    </cafemenu>
+  </xml>
+  <p>Select your books from the list below. To calculate the amount of the bill,
+    click the Calculate Bill button. Check the &quot; Highlight Popular Books &quot;
+    box to highlight Popular Books.</p>
+  <table id="menuTable" border="1" class="indent">
+    <thead>
+      <tr>
+        <th colspan="4">Suryansh's Book Store</th>
+      </tr>
+      <tr>
+        <th>Select</th>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <form class="indent">
+    <p>
+      <input type="button" name="btnCalcBill" value="Calculate Bill" id="calcBill" />
+      Total: $
+      <input type="text" name="txtBillAmt" />
+      <input type="checkbox" name="cbOpts" value="isVeg" id="showVeg" />
+      <label for="showVeg">Highlight Popular Books</label>
+    </p>
+  </form>
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
